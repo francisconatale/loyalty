@@ -67,4 +67,5 @@ nav:
       - API REST de Clientes y Puntos: contracts/customer-loyalty.md
   - Guías y Estándares:
       - Validación Rápida (Quickstart): guides/quickstart.md
+      - Guía de Extensión: guides/extending.md
       - Estándares Zero-Boilerplate: guides/zero-boilerplate.md

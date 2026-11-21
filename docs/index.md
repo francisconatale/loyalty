@@ -10,6 +10,7 @@ Plataforma SaaS de fidelización y automatización de clientes para comercios mi
 2. **Entender el Modelo de Dominio**: Explorá las entidades en [Resumen del Modelo](domain/overview.md) y el libro mayor inmutable en [Programas de Puntos y Ledger](domain/loyalty-ledger.md).
 3. **Probar el Flujo End-to-End**: Ejecutá los escenarios con `curl` en [Validación Rápida (Quickstart)](guides/quickstart.md).
 4. **Respetar los Estándares de Código**: Seguí las reglas de Java 17 y Spring Boot 3 en [Estándares Zero-Boilerplate](guides/zero-boilerplate.md).
+5. **Extender el Motor**: Creá nuevos adaptadores de POS y disparadores de automatización con la [Guía de Extensión](guides/extending.md).
 
 ---
 
@@ -51,4 +52,5 @@ graph TD
 
     E --> E1["Quickstart"]
     E --> E2["Zero-Boilerplate"]
+    E --> E3["Extensión"]
 ```

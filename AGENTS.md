@@ -6,7 +6,7 @@ Guidelines for AI agents and developers working on the `loyalty-engine` project.
 
 ## 1. Architectural Role & Context
 
-`loyalty-engine` is a **Loyalty & Rewards Core Backend / BFF** built on **Spring Boot 3.2+** and **Java 17**.
+`loyalty-engine` is a **Loyalty & Rewards Core Backend Service** built on **Spring Boot 3.2+** and **Java 17**.
 - Manages loyalty accounts, customer tiers, point accruals, ledger transactions, and reward redemptions.
 - Provides institutional and third-party persistence via **PostgreSQL** (leveraging JSONB for dynamic tier rules and reward metadata).
 - Handles multi-source authentication: external e-commerce / POS terminals (M2M via API Key), backoffice administrators, and client portals.
@@ -110,7 +110,7 @@ Security in `loyalty-engine` uses Spring Security 6 with three distinct, ordered
        │
        ├── /api/v1/events + /api/v1/coupons/** ──> Order(1): integrationSecurity (Stateless, ApiKeyFilter, ROLE_INTEGRATION_SERVICE)
        │
-       ├── /api/**             ──> Order(2): applicationSecurity (BFF REST, JsonAuthenticationFilter, 401 EntryPoint)
+       ├── /api/**             ──> Order(2): applicationSecurity (REST API, JsonAuthenticationFilter, 401 EntryPoint)
        │
        └── /**                 ──> Order(3): portalSecurity (Backoffice Web, formLogin, Session)
 ```

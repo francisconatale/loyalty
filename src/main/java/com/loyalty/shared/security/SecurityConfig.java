@@ -67,7 +67,7 @@ public class SecurityConfig {
     }
 
     /**
-     * Chain 2: Application Security for REST BFF endpoints
+     * Chain 2: Application Security for REST endpoints
      */
     @Bean
     @Order(2)

@@ -24,7 +24,7 @@
 
 ## Overview
 
-**Loyalty Engine** is an enterprise-grade backend service and BFF (Backend-for-Frontend) built to power omni-channel customer loyalty programs, real-time point accruals, and cash-desk reward redemptions.
+**Loyalty Engine** is an enterprise-grade backend service built to power omni-channel customer loyalty programs, real-time point accruals, and cash-desk reward redemptions.
 
 Retail point-of-sale systems are notoriously fragmented. **Loyalty Engine** decouples POS vendors via canonical normalization adapters, absorbs high-volume retail traffic through an asynchronous event inbox, and guarantees zero accounting drift with an append-only, mathematically auditable double-entry point ledger.
 
@@ -252,6 +252,7 @@ src/main/java/com/loyalty/
 
 - **Swagger UI Interactive Explorer**: Available at `http://localhost:8080/swagger-ui.html` once the application is running.
 - **OpenAPI 3 JSON Specification**: Available at `http://localhost:8080/v3/api-docs`.
+- **Contribution & Extension Guide**: Learn about coding standards, environment setup, and how to implement custom POS adapters in [CONTRIBUTING.md](CONTRIBUTING.md).
 - **System Architecture & Domain Guides**: Comprehensive guides are located in the [`docs/`](docs/) directory and viewable via MkDocs:
   ```bash
   mkdocs serve

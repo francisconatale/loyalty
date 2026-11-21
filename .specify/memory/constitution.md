@@ -57,7 +57,7 @@ The application MUST enforce defensive, fail-fast input validation at all system
 ### IV. Multi-Tier Security Isolation & Transport Decoupling
 Security MUST be partitioned into three dedicated, ordered filter chains preserving strict transport decoupling:
 1. **Chain 1 (`@Order(1)` — `integrationSecurity`)**: Protects `/api/v1/events` and `/api/v1/coupons/**` for POS event ingestion and checkout callbacks. Enforces stateless session management, CSRF disabled, and `X-API-KEY` header evaluation granting `ROLE_INTEGRATION_SERVICE`.
-2. **Chain 2 (`@Order(2)` — `applicationSecurity`)**: Protects BFF endpoints at `/api/**`. Uses `JsonAuthenticationFilter` for credentials posted to `/api/auth/login`, `HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED)` returning HTTP 401 (never a 302 redirect), and `/api/auth/logout` returning HTTP 204.
+2. **Chain 2 (`@Order(2)` — `applicationSecurity`)**: Protects application REST endpoints at `/api/**`. Uses `JsonAuthenticationFilter` for credentials posted to `/api/auth/login`, `HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED)` returning HTTP 401 (never a 302 redirect), and `/api/auth/logout` returning HTTP 204.
 3. **Chain 3 (`@Order(3)` — `portalSecurity`)**: Protects administrative backoffice portal routes (`/**`) using standard form login redirecting to `/dashboard`.
 - Business services (`@Service`) MUST remain decoupled from the HTTP transport layer and MUST NEVER inject or reference `HttpServletRequest`, `HttpServletResponse`, or `HttpSession`.
 - Security roles MUST be centralized in a dedicated `Roles` constant class (e.g., `Roles.ROLE_ADMIN`, `Roles.ROLE_CUSTOMER`, `Roles.ROLE_INTEGRATION_SERVICE`).

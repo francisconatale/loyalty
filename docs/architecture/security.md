@@ -7,7 +7,7 @@ La seguridad de `loyalty-engine` implementa Spring Security 6 con tres cadenas d
        │
        ├── /api/v1/events, /api/v1/coupons/** ──> Order(1): integrationSecurity (Stateless, ApiKeyFilter, ROLE_INTEGRATION_SERVICE)
        │
-       ├── /api/v1/**                        ──> Order(2): applicationSecurity (BFF REST, JsonAuthenticationFilter, 401 EntryPoint)
+       ├── /api/v1/**                        ──> Order(2): applicationSecurity (REST API, JsonAuthenticationFilter, 401 EntryPoint)
        │
        └── /**                               ──> Order(3): portalSecurity (Backoffice Web, formLogin, Session)
 ```
@@ -26,7 +26,7 @@ La seguridad de `loyalty-engine` implementa Spring Security 6 con tres cadenas d
 
 ---
 
-## Cadena 2 (`@Order(2)` — REST API / BFF)
+## Cadena 2 (`@Order(2)` — REST API de Aplicación)
 
 - **Patrón de URL**: `/api/v1/**`
 - **Mecanismo de Autenticación**: `JsonAuthenticationFilter` que procesa credenciales enviadas como JSON `POST` a `/api/auth/login`.

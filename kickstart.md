@@ -1,1 +1,0 @@
-KICKSTART.md
