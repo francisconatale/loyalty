@@ -88,16 +88,16 @@ Tasks are grouped by user story to enable independent implementation and testing
 
 ### Implementation for User Story 2
 
-- [ ] T029 [P] [US2] Create IngestEventRequestDTO and IngestEventResponseDTO records per contract in src/main/java/com/loyalty/integration/api/dto/
-- [ ] T030 [P] [US2] Create IntegrationEvent entity and IntegrationEventRepository with unique constraint in src/main/java/com/loyalty/integration/domain/
-- [ ] T031 [P] [US2] Create Purchase entity, PurchaseStatus enum, and PurchaseRepository in src/main/java/com/loyalty/purchase/domain/
-- [ ] T032 [P] [US2] Create CustomerStats entity and CustomerStatsRepository in src/main/java/com/loyalty/customer/domain/
-- [ ] T033 [P] [US2] Create CustomerStatsResponseDTO record in src/main/java/com/loyalty/customer/api/dto/CustomerStatsResponseDTO.java
-- [ ] T034 [US2] Implement PosNormalizationAdapter interface and KioskitoNormalizationAdapter in src/main/java/com/loyalty/integration/adapters/
-- [ ] T035 [US2] Implement CustomerStatsService for atomic statistical recalculation in src/main/java/com/loyalty/customer/service/CustomerStatsService.java
-- [ ] T036 [US2] Implement PurchaseService for recording purchases and handling cancellations/refunds in src/main/java/com/loyalty/purchase/service/PurchaseService.java
-- [ ] T037 [US2] Implement IntegrationEventInboxService for persistence, deduplication, and async processing worker in src/main/java/com/loyalty/integration/service/IntegrationEventInboxService.java
-- [ ] T038 [US2] Implement EventIngestionController exposing POST /api/v1/events in src/main/java/com/loyalty/integration/api/EventIngestionController.java
+- [X] T029 [P] [US2] Create IngestEventRequestDTO and IngestEventResponseDTO records per contract in src/main/java/com/loyalty/integration/api/dto/
+- [X] T030 [P] [US2] Create IntegrationEvent entity and IntegrationEventRepository with unique constraint in src/main/java/com/loyalty/integration/domain/
+- [X] T031 [P] [US2] Create Purchase entity, PurchaseStatus enum, and PurchaseRepository in src/main/java/com/loyalty/purchase/domain/
+- [X] T032 [P] [US2] Create CustomerStats entity and CustomerStatsRepository in src/main/java/com/loyalty/customer/domain/
+- [X] T033 [P] [US2] Create CustomerStatsResponseDTO record in src/main/java/com/loyalty/customer/api/dto/CustomerStatsResponseDTO.java
+- [X] T034 [US2] Implement PosNormalizationAdapter interface and KioskitoNormalizationAdapter in src/main/java/com/loyalty/integration/adapters/
+- [X] T035 [US2] Implement CustomerStatsService for atomic statistical recalculation in src/main/java/com/loyalty/customer/service/CustomerStatsService.java
+- [X] T036 [US2] Implement PurchaseService for recording purchases and handling cancellations/refunds in src/main/java/com/loyalty/purchase/service/PurchaseService.java
+- [X] T037 [US2] Implement IntegrationEventInboxService for persistence, deduplication, and async processing worker in src/main/java/com/loyalty/integration/service/IntegrationEventInboxService.java
+- [X] T038 [US2] Implement EventIngestionController exposing POST /api/v1/events in src/main/java/com/loyalty/integration/api/EventIngestionController.java
 
 **Checkpoint**: User Stories 1 and 2 operate together. Incoming sales are reliably recorded, deduplicated, and analyzed in real-time.
 
