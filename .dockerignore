@@ -1,0 +1,11 @@
+target/
+.git/
+.gitignore
+.dockerignore
+*.log
+.env*
+.idea/
+.vscode/
+.specify/
+specs/
+docs/
