@@ -19,10 +19,10 @@ Tasks are grouped by user story to enable independent implementation and testing
 
 **Purpose**: Project initialization, directory structure, dependency verification, and base configuration.
 
-- [ ] T001 Create modular directory structure under src/main/java/com/loyalty and src/test/java/com/loyalty per implementation plan
-- [ ] T002 Verify and configure Maven build dependencies and compiler settings in pom.xml
-- [ ] T003 [P] Configure application runtime properties and PostgreSQL Hibernate JSONB settings in src/main/resources/application.yml
-- [ ] T004 [P] Configure test application properties with PostgreSQL compatibility mode in src/test/resources/application-test.yml
+- [X] T001 Create modular directory structure under src/main/java/com/loyalty and src/test/java/com/loyalty per implementation plan
+- [X] T002 Verify and configure Maven build dependencies and compiler settings in pom.xml
+- [X] T003 [P] Configure application runtime properties and PostgreSQL Hibernate JSONB settings in src/main/resources/application.yml
+- [X] T004 [P] Configure test application properties with PostgreSQL compatibility mode in src/test/resources/application-test.yml
 
 ---
 
@@ -32,18 +32,18 @@ Tasks are grouped by user story to enable independent implementation and testing
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete.
 
-- [ ] T005 [P] Create BaseEntity with audit timestamps in src/main/java/com/loyalty/shared/domain/BaseEntity.java
-- [ ] T006 [P] Create ApiErrorResponse record DTO in src/main/java/com/loyalty/shared/exception/ApiErrorResponse.java
-- [ ] T007 [P] Create domain exceptions (ResourceNotFoundException, InsufficientPointsException, DuplicateEventException) in src/main/java/com/loyalty/shared/exception/
-- [ ] T008 Implement GlobalExceptionHandler with fail-fast validation and REST error handling in src/main/java/com/loyalty/shared/exception/GlobalExceptionHandler.java
-- [ ] T009 [P] Define Roles constants (ROLE_ADMIN, ROLE_CUSTOMER, ROLE_INTEGRATION_SERVICE) in src/main/java/com/loyalty/shared/security/Roles.java
-- [ ] T010 [P] Implement TenantSecurityContext holder for thread-safe tenant context in src/main/java/com/loyalty/shared/security/TenantSecurityContext.java
-- [ ] T011 Implement ApiKeyFilter for X-API-KEY validation and tenant resolution in src/main/java/com/loyalty/shared/security/ApiKeyFilter.java
-- [ ] T012 Implement JsonAuthenticationFilter for /api/auth/login BFF authentication in src/main/java/com/loyalty/shared/security/JsonAuthenticationFilter.java
-- [ ] T013 Configure three-tier Spring Security filter chains with 401 REST entry points in src/main/java/com/loyalty/shared/security/SecurityConfig.java
-- [ ] T014 Create V1 initial schema Flyway migration with tables, indices, and JSONB columns in src/main/resources/db/migration/V1__initial_schema.sql
-- [ ] T015 Create Tenant domain entity, TenantStatus enum, and repository in src/main/java/com/loyalty/tenant/domain/
-- [ ] T016 Implement TenantService for tenant lifecycle and lookup in src/main/java/com/loyalty/tenant/service/TenantService.java
+- [X] T005 [P] Create BaseEntity with audit timestamps in src/main/java/com/loyalty/shared/domain/BaseEntity.java
+- [X] T006 [P] Create ApiErrorResponse record DTO in src/main/java/com/loyalty/shared/exception/ApiErrorResponse.java
+- [X] T007 [P] Create domain exceptions (ResourceNotFoundException, InsufficientPointsException, DuplicateEventException) in src/main/java/com/loyalty/shared/exception/
+- [X] T008 Implement GlobalExceptionHandler with fail-fast validation and REST error handling in src/main/java/com/loyalty/shared/exception/GlobalExceptionHandler.java
+- [X] T009 [P] Define Roles constants (ROLE_ADMIN, ROLE_CUSTOMER, ROLE_INTEGRATION_SERVICE) in src/main/java/com/loyalty/shared/security/Roles.java
+- [X] T010 [P] Implement TenantSecurityContext holder for thread-safe tenant context in src/main/java/com/loyalty/shared/security/TenantSecurityContext.java
+- [X] T011 Implement ApiKeyFilter for X-API-KEY validation and tenant resolution in src/main/java/com/loyalty/shared/security/ApiKeyFilter.java
+- [X] T012 Implement JsonAuthenticationFilter for /api/auth/login BFF authentication in src/main/java/com/loyalty/shared/security/JsonAuthenticationFilter.java
+- [X] T013 Configure three-tier Spring Security filter chains with 401 REST entry points in src/main/java/com/loyalty/shared/security/SecurityConfig.java
+- [X] T014 Create V1 initial schema Flyway migration with tables, indices, and JSONB columns in src/main/resources/db/migration/V1__initial_schema.sql
+- [X] T015 Create Tenant domain entity, TenantStatus enum, and repository in src/main/java/com/loyalty/tenant/domain/
+- [X] T016 Implement TenantService for tenant lifecycle and lookup in src/main/java/com/loyalty/tenant/service/TenantService.java
 - [ ] T017 Security integration test verifying 3 filter chains and 401 unauthenticated challenges in src/test/java/com/loyalty/security/MultiChainSecurityTest.java
 
 **Checkpoint**: Foundation ready — user story implementation can now begin.
@@ -62,14 +62,14 @@ Tasks are grouped by user story to enable independent implementation and testing
 
 ### Implementation for User Story 1
 
-- [ ] T019 [P] [US1] Create PosIntegration entity and EventStatus enum in src/main/java/com/loyalty/integration/domain/PosIntegration.java
-- [ ] T020 [P] [US1] Create PosIntegrationRepository in src/main/java/com/loyalty/integration/domain/PosIntegrationRepository.java
-- [ ] T021 [P] [US1] Create Customer and ExternalCustomerReference entities in src/main/java/com/loyalty/customer/domain/
-- [ ] T022 [P] [US1] Create CustomerRepository and ExternalCustomerReferenceRepository in src/main/java/com/loyalty/customer/domain/
-- [ ] T023 [P] [US1] Create CustomerResponseDTO and CustomerRequestDTO records with validation in src/main/java/com/loyalty/customer/api/dto/
-- [ ] T024 [US1] Implement PosIntegrationService for credential validation and tenant binding in src/main/java/com/loyalty/integration/service/PosIntegrationService.java
-- [ ] T025 [US1] Implement CustomerService with idempotent inline upsert and external reference mapping in src/main/java/com/loyalty/customer/service/CustomerService.java
-- [ ] T026 [US1] Implement CustomerController for customer profile queries in src/main/java/com/loyalty/customer/api/CustomerController.java
+- [X] T019 [P] [US1] Create PosIntegration entity and EventStatus enum in src/main/java/com/loyalty/integration/domain/PosIntegration.java
+- [X] T020 [P] [US1] Create PosIntegrationRepository in src/main/java/com/loyalty/integration/domain/PosIntegrationRepository.java
+- [X] T021 [P] [US1] Create Customer and ExternalCustomerReference entities in src/main/java/com/loyalty/customer/domain/
+- [X] T022 [P] [US1] Create CustomerRepository and ExternalCustomerReferenceRepository in src/main/java/com/loyalty/customer/domain/
+- [X] T023 [P] [US1] Create CustomerResponseDTO and CustomerRequestDTO records with validation in src/main/java/com/loyalty/customer/api/dto/
+- [X] T024 [US1] Implement PosIntegrationService for credential validation and tenant binding in src/main/java/com/loyalty/integration/service/PosIntegrationService.java
+- [X] T025 [US1] Implement CustomerService with idempotent inline upsert and external reference mapping in src/main/java/com/loyalty/customer/service/CustomerService.java
+- [X] T026 [US1] Implement CustomerController for customer profile queries in src/main/java/com/loyalty/customer/api/CustomerController.java
 
 **Checkpoint**: User Story 1 is functional and testable independently. Canonical customer identity operates across tenants.
 
