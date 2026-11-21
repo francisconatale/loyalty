@@ -167,14 +167,14 @@ Tasks are grouped by user story to enable independent implementation and testing
 
 ### Implementation for User Story 5
 
-- [ ] T060 [P] [US5] Create Automation entity, TriggerType enum, and AutomationRepository in src/main/java/com/loyalty/automation/domain/
-- [ ] T061 [P] [US5] Create AutomationExecution and AutomationAction entities with ExecutionStatus and ActionType enums in src/main/java/com/loyalty/automation/domain/
-- [ ] T062 [P] [US5] Create AutomationExecutionRepository and AutomationActionRepository in src/main/java/com/loyalty/automation/domain/
-- [ ] T063 [P] [US5] Implement EmailNotificationService and EmailProviderAdapter interface in src/main/java/com/loyalty/notification/email/
-- [ ] T064 [P] [US5] Implement WhatsAppProviderAdapter interface stub in src/main/java/com/loyalty/notification/whatsapp/WhatsAppProviderAdapter.java
-- [ ] T065 [US5] Implement TriggerEvaluator interface and InactiveCustomerTriggerEvaluator in src/main/java/com/loyalty/automation/trigger/
-- [ ] T066 [US5] Implement ActionExecutor interface, GenerateCouponActionExecutor, and SendEmailActionExecutor in src/main/java/com/loyalty/automation/action/
-- [ ] T067 [US5] Implement AutomationEngineService with idempotency checks and scheduled evaluation job in src/main/java/com/loyalty/automation/service/AutomationEngineService.java
+- [X] T060 [P] [US5] Create Automation entity, TriggerType enum, and AutomationRepository in src/main/java/com/loyalty/automation/domain/
+- [X] T061 [P] [US5] Create AutomationExecution and AutomationAction entities with ExecutionStatus and ActionType enums in src/main/java/com/loyalty/automation/domain/
+- [X] T062 [P] [US5] Create AutomationExecutionRepository and AutomationActionRepository in src/main/java/com/loyalty/automation/domain/
+- [X] T063 [P] [US5] Implement EmailNotificationService and EmailProviderAdapter interface in src/main/java/com/loyalty/notification/email/
+- [X] T064 [P] [US5] Implement WhatsAppProviderAdapter interface stub in src/main/java/com/loyalty/notification/whatsapp/WhatsAppProviderAdapter.java
+- [X] T065 [US5] Implement TriggerEvaluator interface and InactiveCustomerTriggerEvaluator in src/main/java/com/loyalty/automation/trigger/
+- [X] T066 [US5] Implement ActionExecutor interface, GenerateCouponActionExecutor, and SendEmailActionExecutor in src/main/java/com/loyalty/automation/action/
+- [X] T067 [US5] Implement AutomationEngineService with idempotency checks and scheduled evaluation job in src/main/java/com/loyalty/automation/service/AutomationEngineService.java
 
 **Checkpoint**: Marketing automations react autonomously to customer lifecycle events.
 
