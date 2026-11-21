@@ -184,10 +184,10 @@ Tasks are grouped by user story to enable independent implementation and testing
 
 **Purpose**: System documentation, OpenAPI/Swagger exposure, PDF generation, and full end-to-end quickstart validation.
 
-- [ ] T068 [P] Configure OpenAPI 3 documentation and Swagger UI in src/main/java/com/loyalty/shared/config/OpenApiConfig.java
-- [ ] T069 [P] Implement receipt/voucher PDF generation using OpenPDF in src/main/java/com/loyalty/shared/document/PdfReportGenerator.java
+- [X] T068 [P] Configure OpenAPI 3 documentation and Swagger UI in src/main/java/com/loyalty/shared/config/OpenApiConfig.java
+- [X] T069 [P] Implement receipt/voucher PDF generation using OpenPDF in src/main/java/com/loyalty/shared/document/PdfReportGenerator.java
 - [ ] T070 Execute and validate end-to-end quickstart scenarios from quickstart.md in src/test/java/com/loyalty/integration/QuickstartValidationEndToEndTest.java
-- [ ] T071 Verify zero-boilerplate checklist, record DTO immutability, and security 401 challenges across all modules
+- [X] T071 Verify zero-boilerplate checklist, record DTO immutability, and security 401 challenges across all modules
 
 ---
 
