@@ -1,0 +1,165 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Loyalty Engine — Unified Event Ingestion API",
+    "version": "1.0.0",
+    "description": "Direct, lightweight event ingestion endpoint. Customer details are optional."
+  },
+  "servers": [
+    {
+      "url": "/api/v1"
+    }
+  ],
+  "security": [
+    {
+      "ApiKeyAuth": []
+    }
+  ],
+  "paths": {
+    "/events": {
+      "post": {
+        "summary": "Push domain event to the engine queue",
+        "description": "Receives a domain event. In purchase events, customerId is mandatory while the customer profile block is optional.",
+        "operationId": "publishEvent",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DomainEventRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Event accepted and enqueued",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DomainEventResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Validation error"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "ApiKeyAuth": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-API-KEY"
+      }
+    },
+    "schemas": {
+      "DomainEventRequest": {
+        "type": "object",
+        "required": ["type", "eventId", "occurredAt", "data"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "purchase.completed",
+              "purchase.cancelled",
+              "purchase.refunded"
+            ],
+            "example": "purchase.completed"
+          },
+          "eventId": {
+            "type": "string",
+            "maxLength": 128,
+            "example": "evt-kioskito-5501"
+          },
+          "occurredAt": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2026-11-21T15:30:00Z"
+          },
+          "data": {
+            "$ref": "#/components/schemas/PurchaseEventData"
+          }
+        }
+      },
+      "PurchaseEventData": {
+        "type": "object",
+        "required": ["purchaseId", "customerId", "total", "currency"],
+        "properties": {
+          "purchaseId": {
+            "type": "string",
+            "example": "sale-1004"
+          },
+          "customerId": {
+            "type": "string",
+            "maxLength": 128,
+            "description": "External customer ID in POS system (mandatory)",
+            "example": "kioskito-user-1"
+          },
+          "total": {
+            "type": "number",
+            "format": "double",
+            "example": 25000.0
+          },
+          "currency": {
+            "type": "string",
+            "maxLength": 3,
+            "example": "ARS"
+          },
+          "customer": {
+            "$ref": "#/components/schemas/OptionalCustomerProfile"
+          }
+        }
+      },
+      "OptionalCustomerProfile": {
+        "type": "object",
+        "description": "Optional customer profile details for first-time registration or contact updates",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "Juan Perez"
+          },
+          "email": {
+            "type": "string",
+            "format": "email",
+            "example": "juan@example.com"
+          },
+          "phone": {
+            "type": "string",
+            "example": "+5491155554444"
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date",
+            "example": "1990-05-15"
+          }
+        }
+      },
+      "DomainEventResponse": {
+        "type": "object",
+        "required": ["status", "inboxId", "receivedAt"],
+        "properties": {
+          "status": {
+            "type": "string",
+            "example": "ACCEPTED"
+          },
+          "inboxId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "receivedAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    }
+  }
+}
