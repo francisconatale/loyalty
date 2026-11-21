@@ -37,3 +37,11 @@ site/
 ### Logs & Env ###
 *.log
 .env
+
+### Specs & Agents ###
+specs/
+.specify/
+.agents/
+AGENTS.md
+agents.md
+
