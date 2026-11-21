@@ -142,14 +142,14 @@ Tasks are grouped by user story to enable independent implementation and testing
 
 ### Implementation for User Story 4
 
-- [ ] T051 [P] [US4] Create Reward entity and RewardRepository in src/main/java/com/loyalty/reward/domain/
-- [ ] T052 [P] [US4] Create RewardRequestDTO and RewardResponseDTO records in src/main/java/com/loyalty/reward/api/dto/
-- [ ] T053 [P] [US4] Create Coupon entity, CouponStatus enum, DiscountType enum, and CouponRepository in src/main/java/com/loyalty/coupon/domain/
-- [ ] T054 [P] [US4] Create ValidateCouponRequestDTO, CouponValidationResponseDTO, RedeemCouponRequestDTO, RedeemCouponResponseDTO records in src/main/java/com/loyalty/coupon/api/dto/
-- [ ] T055 [US4] Implement RewardService for catalog management and points-to-reward redemption in src/main/java/com/loyalty/reward/service/RewardService.java
-- [ ] T056 [US4] Implement CouponService for coupon generation, validation, and single-use redemption in src/main/java/com/loyalty/coupon/service/CouponService.java
-- [ ] T057 [US4] Implement RewardController for reward catalog CRUD in src/main/java/com/loyalty/reward/api/RewardController.java
-- [ ] T058 [US4] Implement CouponController exposing POST /api/v1/coupons/validate and /redeem in src/main/java/com/loyalty/coupon/api/CouponController.java
+- [X] T051 [P] [US4] Create Reward entity and RewardRepository in src/main/java/com/loyalty/reward/domain/
+- [X] T052 [P] [US4] Create RewardRequestDTO and RewardResponseDTO records in src/main/java/com/loyalty/reward/api/dto/
+- [X] T053 [P] [US4] Create Coupon entity, CouponStatus enum, DiscountType enum, and CouponRepository in src/main/java/com/loyalty/coupon/domain/
+- [X] T054 [P] [US4] Create ValidateCouponRequestDTO, CouponValidationResponseDTO, RedeemCouponRequestDTO, RedeemCouponResponseDTO records in src/main/java/com/loyalty/coupon/api/dto/
+- [X] T055 [US4] Implement RewardService for catalog management and points-to-reward redemption in src/main/java/com/loyalty/reward/service/RewardService.java
+- [X] T056 [US4] Implement CouponService for coupon generation, validation, and single-use redemption in src/main/java/com/loyalty/coupon/service/CouponService.java
+- [X] T057 [US4] Implement RewardController for reward catalog CRUD in src/main/java/com/loyalty/reward/api/RewardController.java
+- [X] T058 [US4] Implement CouponController exposing POST /api/v1/coupons/validate and /redeem in src/main/java/com/loyalty/coupon/api/CouponController.java
 
 **Checkpoint**: End-to-end reward and coupon loop is closed. Coupons can be validated and redeemed at POS.
 
