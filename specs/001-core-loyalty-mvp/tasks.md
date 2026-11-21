@@ -116,14 +116,14 @@ Tasks are grouped by user story to enable independent implementation and testing
 
 ### Implementation for User Story 3
 
-- [ ] T041 [P] [US3] Create LoyaltyProgram entity with JSONB configuration and LoyaltyProgramRepository in src/main/java/com/loyalty/loyalty/domain/
-- [ ] T042 [P] [US3] Create LoyaltyAccount entity with optimistic locking and points balance invariants in src/main/java/com/loyalty/loyalty/domain/LoyaltyAccount.java
-- [ ] T043 [P] [US3] Create PointTransaction entity, PointTransactionType enum, and PointTransactionRepository in src/main/java/com/loyalty/loyalty/domain/
-- [ ] T044 [P] [US3] Create CustomerLoyaltyResponseDTO and PointTransactionResponseDTO records in src/main/java/com/loyalty/loyalty/api/dto/
-- [ ] T045 [US3] Implement LoyaltyProgramService for program configuration management in src/main/java/com/loyalty/loyalty/service/LoyaltyProgramService.java
-- [ ] T046 [US3] Implement LoyaltyAccountService for atomic point accrual, idempotent redemption, and reversals in src/main/java/com/loyalty/loyalty/service/LoyaltyAccountService.java
-- [ ] T047 [US3] Implement LoyaltyController exposing GET /api/v1/customers/{customerId}/loyalty and /transactions in src/main/java/com/loyalty/loyalty/api/LoyaltyController.java
-- [ ] T048 [US3] Wire event processing pipeline to trigger LoyaltyAccount point accrual on purchase events in src/main/java/com/loyalty/integration/service/IntegrationEventInboxService.java
+- [X] T041 [P] [US3] Create LoyaltyProgram entity with JSONB configuration and LoyaltyProgramRepository in src/main/java/com/loyalty/loyalty/domain/
+- [X] T042 [P] [US3] Create LoyaltyAccount entity with optimistic locking and points balance invariants in src/main/java/com/loyalty/loyalty/domain/LoyaltyAccount.java
+- [X] T043 [P] [US3] Create PointTransaction entity, PointTransactionType enum, and PointTransactionRepository in src/main/java/com/loyalty/loyalty/domain/
+- [X] T044 [P] [US3] Create CustomerLoyaltyResponseDTO and PointTransactionResponseDTO records in src/main/java/com/loyalty/loyalty/api/dto/
+- [X] T045 [US3] Implement LoyaltyProgramService for program configuration management in src/main/java/com/loyalty/loyalty/service/LoyaltyProgramService.java
+- [X] T046 [US3] Implement LoyaltyAccountService for atomic point accrual, idempotent redemption, and reversals in src/main/java/com/loyalty/loyalty/service/LoyaltyAccountService.java
+- [X] T047 [US3] Implement LoyaltyController exposing GET /api/v1/customers/{customerId}/loyalty and /transactions in src/main/java/com/loyalty/loyalty/api/LoyaltyController.java
+- [X] T048 [US3] Wire event processing pipeline to trigger LoyaltyAccount point accrual on purchase events in src/main/java/com/loyalty/integration/service/IntegrationEventInboxService.java
 
 **Checkpoint**: Point ledger is fully functional, auditable, and mathematically consistent.
 
