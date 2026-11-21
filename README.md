@@ -1,8 +1,6 @@
 <!-- prettier-ignore -->
 <div align="center">
 
-<img src="docs/assets/icon.png" width="96" alt="Loyalty Engine Logo" />
-
 # Loyalty Engine
 
 *High-throughput, multi-tenant loyalty and rewards platform for modern retail and POS ecosystems.*
